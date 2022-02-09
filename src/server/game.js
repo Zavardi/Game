@@ -33,12 +33,12 @@ class Game {
   }
 
   update() {
-    // Calculate time elapsed
+    // Рассчитать прошедшее время
     const now = Date.now();
     const dt = (now - this.lastUpdateTime) / 1000;
     this.lastUpdateTime = now;
 
-    // Update each bullet
+    // Обновите каждую пулю
     const bulletsToRemove = [];
     this.bullets.forEach(bullet => {
       if (bullet.update(dt)) {

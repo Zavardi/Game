@@ -10,7 +10,7 @@
     "start": "cross-env NODE_ENV=production node src/server/server.js",
     "test": "jest"
   },
-  "author": "Victor Zhou",
+  "author": "Zavardi",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",

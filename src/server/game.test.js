@@ -7,7 +7,7 @@ describe('Game', () => {
   it('should update the game on an interval', () => {
     const game = new Game();
 
-    // Force the game to have been created in the past
+    // Заставить игру быть созданной в прошлом
     game.lastUpdateTime = Date.now() - 10;
     const initalCreatedTime = game.lastUpdateTime;
 
@@ -44,7 +44,7 @@ describe('Game', () => {
 
       game.handleInput(socket, 2);
 
-      // Run timers twice, as updates are only sent on every second call
+      // Дважды запускайте таймеры, так как обновления отправляются только при каждом втором вызове.
       jest.runOnlyPendingTimers();
       jest.runOnlyPendingTimers();
 

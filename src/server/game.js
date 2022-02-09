@@ -48,7 +48,7 @@ class Game {
     });
     this.bullets = this.bullets.filter(bullet => !bulletsToRemove.includes(bullet));
 
-    // Update each player
+    // Обновите каждого игрока
     Object.keys(this.sockets).forEach(playerID => {
       const player = this.players[playerID];
       const newBullet = player.update(dt);

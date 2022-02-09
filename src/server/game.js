@@ -15,7 +15,7 @@ class Game {
   addPlayer(socket, username) {
     this.sockets[socket.id] = socket;
 
-    // Generate a position to start this player at.
+    // Сгенерируйте позицию для старта этого игрока.
     const x = Constants.MAP_SIZE * (0.25 + Math.random() * 0.5);
     const y = Constants.MAP_SIZE * (0.25 + Math.random() * 0.5);
     this.players[socket.id] = new Player(socket.id, username, x, y);
@@ -57,7 +57,7 @@ class Game {
       }
     });
 
-    // Apply collisions, give players score for hitting bullets
+    // Применяйте столкновения, давайте игрокам очки за попадание пуль
     const destroyedBullets = applyCollisions(Object.values(this.players), this.bullets);
     destroyedBullets.forEach(b => {
       if (this.players[b.parentID]) {
@@ -66,7 +66,7 @@ class Game {
     });
     this.bullets = this.bullets.filter(bullet => !destroyedBullets.includes(bullet));
 
-    // Check if any players are dead
+    // Проверьте, не мертвы ли какие-либо игроки
     Object.keys(this.sockets).forEach(playerID => {
       const socket = this.sockets[playerID];
       const player = this.players[playerID];
@@ -76,7 +76,7 @@ class Game {
       }
     });
 
-    // Send a game update to each player every other time
+    // Отправлять обновление игры каждому игроку через раз
     if (this.shouldSendUpdate) {
       const leaderboard = this.getLeaderboard();
       Object.keys(this.sockets).forEach(playerID => {

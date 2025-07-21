@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://travis-ci.com/vzhou842/example-.io-game">
-    <img src="https://travis-ci.com/vzhou842/example-.io-game.svg?branch=master" alt="Build Status"></img>
+    <img src="https://travis-ci.com/vzhou842/example-.io-game.svg?branch=master"></img>
   </a>
 </p>
 

@@ -1,9 +1,3 @@
-<p align="center">
-  <a href="https://travis-ci.com/vzhou842/example-.io-game">
-    <img src="https://travis-ci.com/vzhou842/example-.io-game.svg?branch=master"></img>
-  </a>
-</p>
-
 Built with [Node.js](https://nodejs.org/), [socket.io](https://socket.io/), and [HTML5 Canvas](https://www.w3schools.com/html/html5_canvas.asp).
 
 To see this code with [Flow](https://flow.org/) typing, visit the [flow branch](https://github.com/vzhou842/example-.io-game/tree/flow).
